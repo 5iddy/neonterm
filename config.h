@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Input Mono Condensed:pixelsize=16:antialias=true:autohint=true";
+static char *font = "mononoki Nerd Font:pixelsize=16:antialias=true:autohint=true";
 static int borderpx = 0;
 
 /*
@@ -87,7 +87,7 @@ const int boxdraw_braille = 0;
 static int bellvolume = 0;
 
 /* default TERM value */
-char *termname = "st-256color";
+char *termname = "xterm-256color";
 
 /*
  * spaces per tab
@@ -203,10 +203,10 @@ static MouseShortcut mshortcuts[] = {
 	{ XK_ANY_MOD,           Button2, clippaste,       {.i = 0},      1 },
   { XK_ANY_MOD,           Button4, kscrollup,      {.i = 1} },
 	{ XK_ANY_MOD,           Button5, kscrolldown,    {.i = 1} },
-	//{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
-	//{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
-	//{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
-	//{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
+	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
+	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
+	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
+	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
 };
 
 /* Internal keyboard shortcuts. */
